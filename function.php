@@ -51,6 +51,7 @@ function login(){
 
     if($password == $row['password']){
       echo "Login Successful";
+      echo  "<a href="PAW-PG.html"> click </a>"
       $_SESSION["login"] = true;
       $_SESSION["id"] = $row["id"];
     }
