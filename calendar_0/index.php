@@ -53,8 +53,8 @@ $(document).ready(function () {
         
         editable: true,
         eventDrop: function (event, delta) {
-                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
-                    var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+                    var start = $.fullCalendar.formatDate(event.start, "YY-MM-JJ HH:mm:ss");
+                    var end = $.fullCalendar.formatDate(event.end, "YY-MM-JJ HH:mm:ss");
                     $.ajax({
                         url: 'edit-event.php',
                         data: 'title=' + event.title + '&start=' + start + '&end=' + end + '&id=' + event.id,
@@ -125,13 +125,14 @@ body {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="acceuil.php">Accueil<span class="sr-only"></span></a>
+        <a class="nav-link" href="acc.php">Accueil<span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="index.php">planification<span class="sr-only"></span></a>
       </li>
+      
       <li class="nav-item active">
-        <a class="nav-link" href="connecter.php">deconnecter<span class="sr-only"></span></a>
+        <a class="nav-link" href="login.php">deconnecter<span class="sr-only"></span></a>
       </li>
     </ul>
   </div>
